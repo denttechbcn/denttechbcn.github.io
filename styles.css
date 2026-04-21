@@ -1,0 +1,176 @@
+:root {
+  --black: #0f0f0f;
+  --grey: #f2f2f2;
+  --dark: #1a1a1a;
+  --green: #25D366;
+  --pink: #E1306C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+body {
+  background: white;
+  color: #111;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+.nav-buttons .btn {
+  margin-left: 10px;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1542362567-b07e54358753");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  padding: 0 40px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: var(--green);
+}
+
+.hero p {
+  font-size: 20px;
+  opacity: 0.9;
+  margin-bottom: 35px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 120px 40px;
+}
+
+.section.dark {
+  background: var(--black);
+  color: white;
+}
+
+.section.cta {
+  background: var(--grey);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.card {
+  background: var(--grey);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.card ul li {
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+/* VALUES */
+.values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.values h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 14px 26px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.3);
+}
+
+.big {
+  font-size: 18px;
+  padding: 18px 38px;
+}
+
+.whatsapp {
+  background: var(--green);
+}
+
+.instagram {
+  background: var(--pink);
+}
+
+/* FOOTER */
+.footer {
+  padding: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .grid, .values {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 80px 20px;
+  }
+}

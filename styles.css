@@ -2,84 +2,64 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
 }
 
 body {
-  background: #eef2f6;
-  color: #333;
-  line-height: 1.6;
+  background: #f1f3f6;
+  color: #222;
+  line-height: 1.7;
 }
 
 /* HERO */
 .hero {
-  background: linear-gradient(135deg, #111, #333);
+  background: url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1aa")
+    center/cover no-repeat;
+  height: 80vh;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.65);
+  height: 100%;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 90px 20px;
 }
 
 .hero h1 {
-  font-size: 44px;
-  margin-bottom: 10px;
+  font-size: 48px;
+  letter-spacing: 1px;
 }
 
 .hero p {
+  margin-top: 10px;
   font-size: 20px;
   opacity: 0.9;
 }
 
-/* CARDS */
-.card {
-  background: white;
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 40px 25px;
-  border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-.card h2 {
-  margin-bottom: 15px;
-}
-
-.card ul {
-  padding-left: 20px;
-}
-
-.card ul li {
-  margin-bottom: 10px;
-}
-
-/* HIGHLIGHT */
-.highlight {
-  border-left: 6px solid #25D366;
-}
-
-/* CENTER */
-.center {
-  text-align: center;
-}
-
-/* BOTONES */
-.hero-buttons {
+/* BUTTONS */
+.buttons {
   margin-top: 30px;
 }
 
 .btn {
   display: inline-block;
   padding: 14px 28px;
-  border-radius: 8px;
+  border-radius: 50px;
   text-decoration: none;
   color: white;
   font-weight: 600;
   margin: 6px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
 
 .whatsapp {
@@ -92,13 +72,65 @@ body {
 
 .big {
   font-size: 18px;
-  margin-top: 20px;
+  padding: 18px 36px;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  margin-bottom: 20px;
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+.card ul li {
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.highlight {
+  border-left: 6px solid #25D366;
+}
+
+.center {
+  text-align: center;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 25px;
+  padding: 30px;
   font-size: 14px;
-  color: #777;
+  color: #666;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    margin: 30px 15px;
+    padding: 35px 25px;
+  }
 }

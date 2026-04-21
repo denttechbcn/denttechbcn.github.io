@@ -6,31 +6,27 @@
 }
 
 body {
-  background: #f2f5f9;
+  background: #eef2f6;
   color: #333;
   line-height: 1.6;
 }
 
 /* HERO */
 .hero {
-  background: linear-gradient(135deg, #0b5ed7, #0a58ca);
+  background: linear-gradient(135deg, #111, #333);
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 90px 20px;
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 44px;
   margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 18px;
-  opacity: 0.95;
-}
-
-.hero-buttons {
-  margin-top: 25px;
+  font-size: 20px;
+  opacity: 0.9;
 }
 
 /* CARDS */
@@ -40,11 +36,10 @@ body {
   margin: 40px auto;
   padding: 40px 25px;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 .card h2 {
-  color: #0b5ed7;
   margin-bottom: 15px;
 }
 
@@ -56,34 +51,35 @@ body {
   margin-bottom: 10px;
 }
 
+/* HIGHLIGHT */
 .highlight {
-  border-left: 6px solid #0b5ed7;
+  border-left: 6px solid #25D366;
 }
 
+/* CENTER */
 .center {
   text-align: center;
 }
 
-/* BUTTONS */
+/* BOTONES */
+.hero-buttons {
+  margin-top: 30px;
+}
+
 .btn {
   display: inline-block;
-  padding: 12px 25px;
+  padding: 14px 28px;
   border-radius: 8px;
   text-decoration: none;
   color: white;
   font-weight: 600;
-  margin: 5px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  margin: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.big {
-  font-size: 18px;
-  margin-top: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
 }
 
 .whatsapp {
@@ -94,11 +90,15 @@ body {
   background: #E1306C;
 }
 
+.big {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
   padding: 25px;
   font-size: 14px;
-  color: #666;
+  color: #777;
 }
-``

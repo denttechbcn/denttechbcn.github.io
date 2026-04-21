@@ -2,72 +2,103 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 }
 
 body {
-  background: #f5f7fa;
+  background: #f2f5f9;
   color: #333;
   line-height: 1.6;
 }
 
-header {
-  background: #0b5ed7;
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #0b5ed7, #0a58ca);
   color: white;
-  padding: 60px 20px;
   text-align: center;
+  padding: 80px 20px;
 }
 
-section {
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+.hero-buttons {
+  margin-top: 25px;
+}
+
+/* CARDS */
+.card {
+  background: white;
   max-width: 900px;
   margin: 40px auto;
-  padding: 0 20px;
+  padding: 40px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.07);
 }
 
-h2 {
-  margin-bottom: 12px;
+.card h2 {
   color: #0b5ed7;
+  margin-bottom: 15px;
 }
 
-ul {
+.card ul {
   padding-left: 20px;
 }
 
-ul li {
-  margin-bottom: 8px;
+.card ul li {
+  margin-bottom: 10px;
 }
 
+.highlight {
+  border-left: 6px solid #0b5ed7;
+}
+
+.center {
+  text-align: center;
+}
+
+/* BUTTONS */
 .btn {
   display: inline-block;
-  margin-top: 15px;
   padding: 12px 25px;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 500;
   color: white;
+  font-weight: 600;
+  margin: 5px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.big {
+  font-size: 18px;
+  margin-top: 15px;
 }
 
 .whatsapp {
   background: #25D366;
 }
 
-.whatsapp:hover {
-  background: #1ebe5d;
-}
-
 .instagram {
   background: #E1306C;
-  margin-left: 10px;
 }
 
-.instagram:hover {
-  background: #c02459;
-}
-
+/* FOOTER */
 footer {
-  background: #222;
-  color: white;
   text-align: center;
-  padding: 20px;
-  margin-top: 60px;
+  padding: 25px;
+  font-size: 14px;
+  color: #666;
 }
+``

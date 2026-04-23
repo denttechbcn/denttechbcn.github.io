@@ -8,161 +8,205 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #0a0a0a;
-    color: white;
-}
+    /* RESET Y BASE */
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-family: 'Inter', sans-serif;
+        background: #0a0a0a;
+        color: white;
+        overflow-x: hidden;
+    }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
+    /* HERO FULL SCREEN PREMIUM */
+    .hero-premium {
+        position: relative;
+        height: 100vh; /* Ocupa toda la altura visual */
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+    }
 
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 80px 0;
-}
+    /* La imagen de fondo */
+    .hero-premium img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Clave para que no se deforme */
+        z-index: 1;
+        opacity: 0.5; /* Oscurecemos para que el texto sea legible */
+    }
 
-.hero-text {
-    max-width: 500px;
-}
+    /* El contenido sobre la imagen */
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        padding: 20px;
+    }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
+    .hero-content h1 {
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
+        font-weight: 700;
+        margin-bottom: 20px;
+        line-height: 1.1;
+        letter-spacing: -1px;
+    }
 
-.hero p {
-    color: #ccc;
-    margin-bottom: 30px;
-}
+    .hero-content p {
+        font-size: 1.2rem;
+        color: #ccc;
+        margin-bottom: 35px;
+    }
 
-.btn {
-    display: inline-block;
-    padding: 15px 25px;
-    background: #c8a96a;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-}
+    /* BOTÓN MEJORADO */
+    .btn {
+        display: inline-block;
+        padding: 18px 35px;
+        background: #c8a96a;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 50px;
+        transition: 0.3s;
+        box-shadow: 0 10px 20px rgba(200, 169, 106, 0.3);
+    }
 
-.section {
-    padding: 60px 0;
-}
+    .btn:hover {
+        transform: translateY(-3px);
+        background: #e0bc7a;
+        box-shadow: 0 15px 25px rgba(200, 169, 106, 0.4);
+    }
 
-.cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+    /* RESTO DE SECCIONES */
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
 
-.card {
-    flex: 1;
-    min-width: 250px;
-    background: #111;
-    padding: 30px;
-    border-radius: 10px;
-}
+    .section {
+        padding: 100px 0;
+    }
 
-.before-after {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+    .cards {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
 
-.before-after img {
-    width: 100%;
-    border-radius: 10px;
-}
+    .card {
+        flex: 1;
+        min-width: 280px;
+        background: #111;
+        padding: 40px;
+        border-radius: 15px;
+        border: 1px solid #222;
+        transition: 0.3s;
+    }
 
-.footer {
-    text-align: center;
-    padding: 40px;
-    color: #777;
-}
+    .card:hover {
+        border-color: #c8a96a;
+    }
+
+    .before-after {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .before-after img {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 60px;
+        color: #555;
+        border-top: 1px solid #222;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+        .before-after { grid-template-columns: 1fr; }
+        .hero-premium { height: 80vh; }
+    }
 </style>
 </head>
 
 <body>
 
+<section class="hero-premium">
+    <img src="hero.jpg" alt="PDR Barcelona">
+    <div class="hero-content">
+        <h1>Eliminamos abolladuras <span style="color: #c8a96a;">sin pintar</span></h1>
+        <p>Reparación rápida en Barcelona · Mantén la pintura original de tu vehículo con técnica PDR profesional.</p>
+        <a href="https://wa.me/34TU_NUMERO" class="btn">Enviar fotos por WhatsApp</a>
+    </div>
+</section>
+
 <div class="container">
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-text">
-        <h1>Eliminamos abolladuras sin pintar</h1>
-        <p>Reparación rápida en Barcelona · Mantén la pintura original</p>
-        <a href="https://wa.me/34645291396" class="btn">Enviar fotos por WhatsApp</a>
-    </div>
-
-    <img src="hero.png" style="width: 45%; border-radius: 10px;">
-</section>
-
-<!-- SEGMENTACIÓN -->
-<section class="section">
-    <div class="cards">
-
-        <div class="card">
-            <h3>🚗 Particulares</h3>
-            <p>Elimina golpes sin pintar, rápido y económico.</p>
+    <section class="section">
+        <div class="cards">
+            <div class="card">
+                <h3>🚗 Particulares</h3>
+                <p>Elimina golpes de parking o granizo sin perder la garantía de pintura de origen.</p>
+            </div>
+            <div class="card">
+                <h3>🏪 Talleres</h3>
+                <p>Servicio especializado de varilleros para profesionales del sector automotriz.</p>
+            </div>
+            <div class="card">
+                <h3>🏢 Seguros</h3>
+                <p>Gestión eficiente de siniestros con ahorro de costes y tiempo de entrega.</p>
+            </div>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>🏪 Talleres</h3>
-            <p>Colaboramos para aumentar tus servicios sin riesgo.</p>
+    <section class="section">
+        <h2 style="font-size: 2.5rem; margin-bottom: 30px;">Resultados reales</h2>
+        <div class="before-after">
+            <img src="antes1.jpg" alt="Antes">
+            <img src="despues1.jpg" alt="Después">
         </div>
+    </section>
 
-        <div class="card">
-            <h3>🏢 Seguros</h3>
-            <p>Reducción de costes y gestión eficiente de siniestros.</p>
+    <section class="section">
+        <h2 style="text-align:center; font-size: 2.5rem; margin-bottom: 40px;">Cómo funciona</h2>
+        <div class="cards">
+            <div class="card" style="text-align:center;">
+                <h3>1. Envía fotos</h3>
+                <p>Una foto de cerca y otra de lejos para valorar el daño.</p>
+            </div>
+            <div class="card" style="text-align:center;">
+                <h3>2. Presupuesto</h3>
+                <p>Recibe una valoración rápida sin compromiso.</p>
+            </div>
+            <div class="card" style="text-align:center;">
+                <h3>3. Reparación</h3>
+                <p>Tu coche listo en horas, no en días.</p>
+            </div>
         </div>
+    </section>
 
-    </div>
-</section>
-
-<!-- ANTES DESPUÉS -->
-<section class="section">
-    <h2>Resultados reales</h2>
-
-    <div class="before-after">
-        <img src="antes1.jpg">
-        <img src="despues1.jpg">
-    </div>
-</section>
-
-<!-- COMO FUNCIONA -->
-<section class="section">
-    <h2>Cómo funciona</h2>
-
-    <div class="cards">
-        <div class="card">
-            <h3>1. Envía fotos</h3>
-        </div>
-        <div class="card">
-            <h3>2. Recibe presupuesto</h3>
-        </div>
-        <div class="card">
-            <h3>3. Reparación en el día</h3>
-        </div>
-    </div>
-</section>
-
-<!-- CTA FINAL -->
-<section class="section" style="text-align:center;">
-    <h2>¿Tienes una abolladura?</h2>
-    <a href="https://wa.me/34TU_NUMERO" class="btn">Solicitar presupuesto</a>
-</section>
+    <section class="section" style="text-align:center;">
+        <h2 style="font-size: 3rem;">¿Hablamos?</h2>
+        <p style="margin-bottom: 30px;">No dejes que una abolladura baje el valor de tu coche.</p>
+        <a href="https://wa.me/34TU_NUMERO" class="btn">Solicitar presupuesto ahora</a>
+    </section>
 
 </div>
 
 <div class="footer">
-    Dent Tech BCN · PDR Barcelona
+    Dent Tech BCN · Expertos en PDR Barcelona · 2026
 </div>
 
 </body>

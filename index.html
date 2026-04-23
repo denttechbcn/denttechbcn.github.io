@@ -1,57 +1,169 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dent Tech | PDR sin pintar Barcelona</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dent Tech BCN | PDR Barcelona</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #0a0a0a;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background: #c8a96a;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 250px;
+    background: #111;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.before-after {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.before-after img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px;
+    color: #777;
+}
+</style>
 </head>
 
 <body>
 
-<header class="header">
-  <div class="container">
-    <h1 class="logo">DENT TECH</h1>
-    <a href="#contacto" class="nav-btn">Contacto</a>
-  </div>
-</header>
+<div class="container">
 
+<!-- HERO -->
 <section class="hero">
-  <div class="overlay"></div>
+    <div class="hero-text">
+        <h1>Eliminamos abolladuras sin pintar</h1>
+        <p>Reparación rápida en Barcelona · Mantén la pintura original</p>
+        <a href="https://wa.me/34TU_NUMERO" class="btn">Enviar fotos por WhatsApp</a>
+    </div>
 
-  <div class="hero-content">
-    <h2>Reparación de abolladuras sin pintar</h2>
-    <p>Técnica PDR de alta precisión en Barcelona</p>
-
-    <a href="https://wa.me/34TU_NUMERO" class="btn">
-      Contacto por WhatsApp
-    </a>
-  </div>
+    <img src="tu-imagen.jpg" alt="PDR" style="width: 45%; border-radius: 10px;">
 </section>
 
-<section class="features">
-  <div class="container">
-    <div class="feature">
-      <h3>Precisión</h3>
+<!-- SEGMENTACIÓN -->
+<section class="section">
+    <div class="cards">
+
+        <div class="card">
+            <h3>🚗 Particulares</h3>
+            <p>Elimina golpes sin pintar, rápido y económico.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏪 Talleres</h3>
+            <p>Colaboramos para aumentar tus servicios sin riesgo.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏢 Seguros</h3>
+            <p>Reducción de costes y gestión eficiente de siniestros.</p>
+        </div>
+
     </div>
-    <div class="feature">
-      <h3>Rapidez</h3>
-    </div>
-    <div class="feature">
-      <h3>Garantía</h3>
-    </div>
-  </div>
 </section>
 
-<section class="info">
-  <div class="container">
-    <p>📍 Barcelona</p>
-    <p>⏱ Reparaciones en el día</p>
-    <p>🚗 Resultado original sin pintura ni masilla</p>
-  </div>
+<!-- ANTES DESPUÉS -->
+<section class="section">
+    <h2>Resultados reales</h2>
+
+    <div class="before-after">
+        <img src="antes1.jpg">
+        <img src="despues1.jpg">
+    </div>
 </section>
+
+<!-- COMO FUNCIONA -->
+<section class="section">
+    <h2>Cómo funciona</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>1. Envía fotos</h3>
+        </div>
+        <div class="card">
+            <h3>2. Recibe presupuesto</h3>
+        </div>
+        <div class="card">
+            <h3>3. Reparación en el día</h3>
+        </div>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section" style="text-align:center;">
+    <h2>¿Tienes una abolladura?</h2>
+    <a href="https://wa.me/34TU_NUMERO" class="btn">Solicitar presupuesto</a>
+</section>
+
+</div>
+
+<div class="footer">
+    Dent Tech BCN · PDR Barcelona
+</div>
 
 </body>
 </html>

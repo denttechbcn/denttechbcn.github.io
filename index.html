@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dent Tech BCN | PDR Barcelona</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* RESET PROFESIONAL */
         * {
             margin: 0;
             padding: 0;
@@ -19,75 +17,61 @@
 
         body, html {
             width: 100%;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', sans-serif;
             background: #0a0a0a;
             color: white;
-            line-height: 1.5;
             overflow-x: hidden;
         }
 
-        /* HERO ADAPTATIVO (MÓVIL Y PC) */
+        /* HERO AJUSTADO PARA TU IMAGEN DE DISEÑO */
         .hero-premium {
             position: relative;
-            height: 60vh; /* Altura ideal para ver contenido abajo */
-            min-height: 450px;
             width: 100%;
+            /* En PC se verá grande, en móvil se ajustará */
+            height: 70vh; 
+            min-height: 300px;
             display: flex;
-            align-items: center;
+            align-items: flex-end; /* Bajamos el botón al final de la imagen */
             justify-content: center;
-            text-align: center;
             background-color: #000;
-            /* IMAGEN DE FONDO CON CAPA OSCURA */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('hero.jpg');
-            background-size: cover;
-            background-position: center center;
+            
+            /* USAMOS TU IMAGEN SIN CAPAS OSCURAS ENCIMA */
+            background-image: url('hero.jpg');
+            background-size: contain; /* Para que se vea toda la imagen sin recortes */
+            background-position: center top;
             background-repeat: no-repeat;
         }
+
+        /* Si prefieres que la imagen cubra todo el ancho aunque se corte un poco: 
+           cambia 'contain' por 'cover' arriba */
 
         .hero-content {
             z-index: 2;
             width: 90%;
-            max-width: 800px;
-            padding: 20px;
-        }
-
-        .hero-content h1 {
-            font-size: clamp(2rem, 8vw, 3.5rem);
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 15px;
-        }
-
-        .hero-content p {
-            font-size: clamp(1rem, 4vw, 1.2rem);
-            color: #ccc;
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            padding-bottom: 40px; /* Espacio para el botón */
+            text-align: center;
         }
 
         /* BOTÓN WHATSAPP */
         .btn {
             display: inline-block;
             padding: 16px 35px;
-            background: #c8a96a; /* Dorado Dent Tech */
+            background: #c8a96a;
             color: #000;
             text-decoration: none;
             font-weight: 700;
             border-radius: 50px;
-            transition: transform 0.3s ease, background 0.3s ease;
-            box-shadow: 0 8px 15px rgba(200, 169, 106, 0.2);
+            transition: transform 0.3s ease;
+            box-shadow: 0 8px 15px rgba(200, 169, 106, 0.4);
             text-transform: uppercase;
             font-size: 0.9rem;
         }
 
         .btn:hover {
-            transform: translateY(-3px);
+            transform: scale(1.05);
             background: #e0bc7a;
         }
 
-        /* CONTENEDOR PRINCIPAL */
         .container {
             width: 90%;
             max-width: 1100px;
@@ -95,16 +79,9 @@
         }
 
         .section {
-            padding: 60px 0;
+            padding: 40px 0;
         }
 
-        h2 {
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        /* TARJETAS FLEXIBLES */
         .cards {
             display: flex;
             flex-wrap: wrap;
@@ -112,24 +89,15 @@
         }
 
         .card {
-            flex: 1 1 300px; /* Se pone una debajo de otra en móvil automáticamente */
+            flex: 1 1 300px;
             background: #121212;
             padding: 30px;
             border-radius: 15px;
             border: 1px solid #222;
-            transition: border-color 0.3s ease;
         }
 
-        .card:hover {
-            border-color: #c8a96a;
-        }
+        .card h3 { color: #c8a96a; margin-bottom: 10px; }
 
-        .card h3 {
-            color: #c8a96a;
-            margin-bottom: 15px;
-        }
-
-        /* ANTES Y DESPUÉS ADAPTATIVO */
         .before-after {
             display: flex;
             flex-wrap: wrap;
@@ -141,21 +109,21 @@
             flex: 1 1 45%;
             min-width: 280px;
             border-radius: 12px;
-            object-fit: cover;
         }
 
         .footer {
             text-align: center;
-            padding: 50px 20px;
+            padding: 40px;
             color: #555;
-            border-top: 1px solid #111;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
-        /* AJUSTE PARA MÓVILES MUY PEQUEÑOS */
-        @media (max-width: 480px) {
-            .hero-premium { height: 55vh; }
-            .btn { width: 100%; text-align: center; }
+        /* AJUSTE PARA MÓVIL: La imagen de diseño suele ser apaisada */
+        @media (max-width: 768px) {
+            .hero-premium {
+                height: 40vh; /* Más bajito en móvil para que no quede mucho aire negro */
+                background-size: contain;
+            }
         }
     </style>
 </head>
@@ -164,19 +132,16 @@
 
     <section class="hero-premium">
         <div class="hero-content">
-            <h1>Abolladuras <span style="color: #c8a96a;">sin pintar</span></h1>
-            <p>Reparación artesanal PDR en Barcelona. Mantén la pintura original de tu coche y ahorra tiempo.</p>
             <a href="https://wa.me/34645291396" class="btn">Presupuesto WhatsApp</a>
         </div>
     </section>
 
     <div class="container">
-
         <section class="section">
             <div class="cards">
                 <div class="card">
                     <h3>🚗 Particulares</h3>
-                    <p>Especialistas en golpes de parking y granizo. Resultados impecables en el mismo día.</p>
+                    <p>Reparación de golpes de parking y granizo. Resultados impecables en el mismo día.</p>
                 </div>
                 <div class="card">
                     <h3>🏪 Talleres</h3>
@@ -190,23 +155,16 @@
         </section>
 
         <section class="section">
-            <h2>Resultados Reales</h2>
+            <h2 style="text-align:center; margin-bottom:30px;">Resultados Reales</h2>
             <div class="before-after">
-                <img src="antes1.jpg" alt="Antes de reparar abolladura">
-                <img src="despues1.jpg" alt="Después de reparar abolladura">
+                <img src="antes1.jpg" alt="Antes">
+                <img src="despues1.jpg" alt="Después">
             </div>
         </section>
-
-        <section class="section" style="text-align:center;">
-            <h2>¿Tienes una abolladura?</h2>
-            <p style="margin-bottom:30px; color:#999;">Envía fotos ahora y recibe tu presupuesto al instante.</p>
-            <a href="https://wa.me/34645291396" class="btn">Solicitar Presupuesto</a>
-        </section>
-
     </div>
 
     <div class="footer">
-        © 2026 Dent Tech BCN · Barcelona · PDR Specialists (Paintless Dent Repair)
+        © 2026 Dent Tech BCN · Barcelona · PDR Specialists
     </div>
 
 </body>

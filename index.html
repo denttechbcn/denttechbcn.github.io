@@ -23,6 +23,7 @@
             overflow-x: hidden;
         }
 
+        /* ANIMACIÓN DE PULSO PARA BOTONES */
         @keyframes pulse-gold {
             0% { box-shadow: 0 0 0 0 rgba(200, 169, 106, 0.7); }
             70% { box-shadow: 0 0 0 15px rgba(200, 169, 106, 0); }
@@ -31,6 +32,7 @@
 
         .container { width: 90%; max-width: 1100px; margin: auto; }
 
+        /* HERO AGRESIVO */
         .hero {
             position: relative;
             width: 100%;
@@ -52,6 +54,7 @@
 
         .highlight { color: var(--dorado); text-transform: uppercase; }
 
+        /* BOTÓN ULTRA-VISIBLE */
         .btn-direct {
             display: inline-flex;
             align-items: center;
@@ -70,6 +73,7 @@
 
         .btn-direct:hover { transform: scale(1.05); background-color: #fff; }
 
+        /* SECCIÓN EL PROBLEMA (TEXTO DIRECTO) */
         .direct-info { padding: 80px 0; text-align: center; border-bottom: 1px solid #1a1a1a; }
         .direct-info h2 { font-size: 2rem; margin-bottom: 30px; letter-spacing: -1px; }
 
@@ -90,6 +94,7 @@
         .bullet h3 { font-size: 1.1rem; margin-bottom: 5px; color: var(--dorado); }
         .bullet p { font-size: 0.9rem; color: #888; }
 
+        /* ANTES Y DESPUÉS MEJORADO */
         .comparison { background: #050505; padding: 80px 0; }
         .comparison-title { text-align: center; margin-bottom: 40px; }
         
@@ -102,6 +107,7 @@
 
         .img-stack img { width: 100%; border-radius: 8px; filter: grayscale(20%); }
 
+        /* WHATSAPP FLOTANTE AGRESIVO */
         .ws-float {
             position: fixed;
             bottom: 30px;
@@ -119,113 +125,77 @@
             box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
         }
 
+        /* FOOTER SIMPLE */
         .footer { padding: 40px 0; text-align: center; color: #333; font-size: 0.8rem; }
 
         @media (max-width: 768px) {
             .hero { height: 75vh; }
             .img-stack { grid-template-columns: 1fr; }
             .btn-direct { width: 100%; font-size: 1rem; }
-            .ws-float span { display: none; }
+            .ws-float span { display: none; } /* En móvil solo el icono para no molestar */
             .ws-float { padding: 15px; border-radius: 50%; }
         }
     </style>
 </head>
 <body>
 
-<a href="https://wa.me/34645291396" class="ws-float">
-    <span>WhatsApp</span>
-</a>
+    <a href="https://wa.me/34645291396" class="ws-float">
+        <svg width="25" height="25" fill="white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.888 11.888-11.888 3.176 0 6.161 1.237 8.404 3.48s3.48 5.228 3.48 8.404c0 6.556-5.332 11.888-11.888 11.888-2.01 0-3.986-.51-5.733-1.478l-6.25 1.639zm6.103-3.743c1.501.887 3.413 1.46 5.762 1.46 5.453 0 9.888-4.435 9.888-9.888s-4.435-9.888-9.888-9.888-9.888 4.435-9.888 9.888c0 2.221.579 4.388 1.677 6.124l-1.012 3.705 3.461-.907z"/></svg>
+        <span>¿Presupuesto rápido?</span>
+    </a>
 
-<header class="hero">
-    <div class="hero-content container">
-        <h1>¿TIENES UN GOLPE EN TU COCHE? <br><span class="highlight">REPARA HOY</span></h1>
+    <header class="hero">
+        <div class="hero-content container">
+            <h1>¿GOLPE EN <br>TU COCHE? <br><span class="highlight">REPARA HOY</span></h1>
+            <p>Especialistas en PDR. Sin pintar, sin masillas, resultado de fábrica.</p>
+            <a href="https://wa.me/34645291396" class="btn-direct">Enviar foto por WhatsApp</a>
+        </div>
+    </header>
 
-        <p>Reparación PDR sin pintar. Ahorra dinero y mantén la pintura original.</p>
-
-        <p style="margin-bottom:20px;">
-        Evita repintar tu coche y ahorra cientos de euros
-        </p>
-
+    <section class="direct-info container">
+        <h2>REPARACIÓN EN 3 PASOS</h2>
+        <div class="grid-bullets">
+            <div class="bullet">
+                <h3>1. Envía Foto</h3>
+                <p>Mándanos una foto de la abolladura por WhatsApp.</p>
+            </div>
+            <div class="bullet">
+                <h3>2. Presupuesto</h3>
+                <p>Te damos precio y cita en menos de 15 minutos.</p>
+            </div>
+            <div class="bullet">
+                <h3>3. Como nuevo</h3>
+                <p>Reparamos tu coche en el taller o a domicilio.</p>
+            </div>
+        </div>
         <a href="https://wa.me/34645291396" class="btn-direct">Enviar foto ahora</a>
+    </section>
 
-        <p style="margin-top:15px; font-size:0.9rem; color:#aaa;">
-        Respuesta en menos de 15 minutos · Sin compromiso
-        </p>
-    </div>
-</header>
-
-<section class="direct-info container">
-    <h2>REPARACIÓN EN 3 PASOS</h2>
-
-    <div class="grid-bullets">
-        <div class="bullet">
-            <h3>1. Envía Foto</h3>
-            <p>Mándanos una foto de la abolladura por WhatsApp.</p>
+    <section class="comparison">
+        <div class="container">
+            <div class="comparison-title">
+                <p style="color:var(--dorado); font-weight:700;">CALIDAD REAL</p>
+                <h2>RESULTADOS SIN PINTAR</h2>
+            </div>
+            <div class="img-stack">
+                <img src="antes1.jpg" alt="Antes">
+                <img src="despues1.jpg" alt="Después">
+            </div>
+            <p style="text-align:center; color:#666; margin-bottom:30px;">Acabado perfecto manteniendo la pintura original.</p>
         </div>
+    </section>
 
-        <div class="bullet">
-            <h3>2. Presupuesto</h3>
-            <p>Te damos precio y cita en menos de 15 minutos.</p>
+    <section style="padding: 100px 0; text-align:center; background: var(--dorado); color: black;">
+        <div class="container">
+            <h2 style="font-size: 3rem; font-weight: 900; line-height: 1;">¿A QUÉ ESPERAS?</h2>
+            <p style="font-weight: 700; margin: 20px 0 40px 0; text-transform: uppercase;">Ahorra tiempo y dinero. Calidad garantizada.</p>
+            <a href="https://wa.me/34645291396" class="btn-direct" style="background: black; color: white;">Enviar foto por WhatsApp</a>
         </div>
+    </section>
 
-        <div class="bullet">
-            <h3>3. Como nuevo</h3>
-            <p>Reparamos tu coche con precisión profesional.</p>
-        </div>
-    </div>
-
-    <a href="https://wa.me/34645291396" class="btn-direct">Enviar foto ahora</a>
-</section>
-
-<section class="comparison">
-    <div class="container">
-        <div class="comparison-title">
-            <p style="color:var(--dorado); font-weight:700;">CALIDAD REAL</p>
-            <h2>RESULTADOS SIN PINTAR</h2>
-
-            <p style="text-align:center; color:#aaa; margin-top:10px;">
-            Más de 100 reparaciones realizadas con éxito
-            </p>
-        </div>
-
-        <div class="img-stack">
-            <img src="antes1.jpg">
-            <img src="despues1.jpg">
-        </div>
-
-        <div class="img-stack">
-            <img src="antes2.jpg">
-            <img src="despues2.jpg">
-        </div>
-
-        <div class="img-stack">
-            <img src="antes3.jpg">
-            <img src="despues3.jpg">
-        </div>
-
-        <p style="text-align:center; color:#666; margin-bottom:30px;">
-        Acabado perfecto manteniendo la pintura original.
-        </p>
-    </div>
-</section>
-
-<section style="padding: 100px 0; text-align:center; background: var(--dorado); color: black;">
-    <div class="container">
-        <h2 style="font-size: 3rem; font-weight: 900;">¿A QUÉ ESPERAS?</h2>
-
-        <p style="font-weight: 700; margin: 20px 0 40px 0;">
-        Ahorra tiempo y dinero. Resultado profesional garantizado.
-        </p>
-
-        <a href="https://wa.me/34645291396" class="btn-direct" style="background: black; color: white;">
-        Enviar foto ahora
-        </a>
-    </div>
-</section>
-
-<footer class="footer">
-    © 2026 Dent Tech Barcelona · PDR Experts
-</footer>
+    <footer class="footer">
+        © 2026 DENT TECH BCN | BARCELONA | PDR EXPERTS
+    </footer>
 
 </body>
 </html>

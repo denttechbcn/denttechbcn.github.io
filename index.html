@@ -6,128 +6,139 @@
     <title>Dent Tech BCN | PDR Barcelona</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* RESET TOTAL */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            background: #000000; /* Negro puro como tu imagen */
+            background: #000000;
             color: white;
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
         }
 
-        /* HERO MEJORADO */
+        /* HERO - MÁXIMA CALIDAD */
         .hero {
             position: relative;
             width: 100%;
-            height: auto; /* Dejamos que la imagen dicte la altura */
-            min-height: 400px;
-            background-color: #000;
+            /* Ajustamos la altura para que respete la proporción original de tu diseño */
+            height: 56.25vw; /* Esto mantiene la proporción 16:9 clásica */
+            max-height: 80vh; 
+            min-height: 350px;
+            
+            background-image: url('hero.jpg');
+            background-size: cover; /* Cubre todo manteniendo calidad */
+            background-position: center center;
+            background-repeat: no-repeat;
+            
             display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .hero-img {
-            width: 100%;
-            max-width: 100%; /* Se estira para no dejar bordes negros */
-            height: auto;
-            display: block;
-        }
-
-        /* Contenedor flotante para el botón */
-        .btn-container {
-            position: absolute;
-            bottom: 15%; /* Lo subimos un poco para que no tape los iconos de abajo de tu foto */
-            width: 100%;
-            display: flex;
+            align-items: flex-end;
             justify-content: center;
-            z-index: 10;
+            background-color: #000;
+        }
+
+        /* Degradado para suavizar la unión con el resto de la web */
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20%;
+            background: linear-gradient(to top, #000000, transparent);
         }
 
         .btn-ws {
-            padding: 15px 35px;
+            position: relative;
+            z-index: 10;
+            bottom: 50px; /* Separación del borde inferior */
+            padding: 16px 38px;
             background: #c8a96a;
             color: black;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
             border-radius: 50px;
             text-transform: uppercase;
-            box-shadow: 0 10px 25px rgba(200, 169, 106, 0.5);
-            transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(200, 169, 106, 0.4);
+            transition: 0.3s ease;
             font-size: 0.9rem;
-            border: 2px solid #000;
+            border: none;
         }
 
-        .btn-ws:hover { transform: scale(1.05); background: #e0bc7a; }
+        .btn-ws:hover { 
+            transform: translateY(-3px) scale(1.02); 
+            background: #e0bc7a; 
+        }
 
-        .container { width: 90%; max-width: 1100px; margin: auto; }
+        .container { width: 92%; max-width: 1100px; margin: auto; }
         
         .section { padding: 40px 0; }
 
-        /* TEXTO DEBAJO DE LA FOTO */
         .intro-text {
             text-align: center;
             padding: 40px 20px;
-            background: #000;
+            line-height: 1.6;
         }
 
         .cards { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 20px; 
+            gap: 25px; 
         }
 
         .card {
-            background: #0a0a0a;
-            padding: 30px;
-            border-radius: 15px;
+            background: #0d0d0d;
+            padding: 35px;
+            border-radius: 20px;
             border: 1px solid #1a1a1a;
+            transition: 0.3s;
         }
 
-        .card h3 { color: #c8a96a; margin-bottom: 10px; }
+        .card:hover { border-color: #c8a96a; }
+        .card h3 { color: #c8a96a; margin-bottom: 12px; font-size: 1.4rem; }
 
         .before-after { 
             display: grid; 
             grid-template-columns: 1fr 1fr; 
             gap: 20px; 
-            margin-top: 20px; 
+            margin-top: 30px; 
         }
         
         .before-after img { 
             width: 100%; 
-            border-radius: 10px; 
+            border-radius: 15px; 
             border: 1px solid #222;
         }
 
         .footer { 
             text-align: center; 
-            padding: 40px; 
-            color: #333; 
-            font-size: 0.8rem;
+            padding: 60px 20px; 
+            color: #444; 
+            font-size: 0.85rem;
+            letter-spacing: 1px;
         }
 
+        /* OPTIMIZACIÓN MÓVIL */
         @media (max-width: 768px) {
+            .hero { 
+                height: 60vh; /* Un poco más de altura en móvil */
+                background-position: 65% center; /* Centramos el coche, no el aire */
+            }
             .before-after { grid-template-columns: 1fr; }
-            .btn-ws { width: 80%; text-align: center; }
-            .btn-container { bottom: 10%; }
+            .btn-ws { width: 85%; text-align: center; bottom: 30px; }
         }
     </style>
 </head>
 <body>
 
     <section class="hero">
-        <img src="hero.jpg" alt="Dent Tech BCN PDR" class="hero-img">
-        
-        <div class="btn-container">
-            <a href="https://wa.me/34645291396" class="btn-ws">Presupuesto WhatsApp</a>
-        </div>
+        <a href="https://wa.me/34645291396" class="btn-ws">Presupuesto WhatsApp</a>
     </section>
 
     <div class="container">
         <div class="intro-text">
-            <p style="font-size: 1.2rem; color: #ccc; max-width: 800px; margin: auto;">
+            <p style="font-size: 1.25rem; color: #ddd; max-width: 800px; margin: auto;">
                 Reparación artesanal <span style="color:#c8a96a; font-weight:bold;">PDR</span> en Barcelona. 
-                Mantén la pintura original de tu coche y ahorra tiempo con técnicos especialistas.
+                Mantén la pintura original de tu coche y recupera su valor sin esperas largas.
             </p>
         </div>
 
@@ -135,21 +146,21 @@
             <div class="cards">
                 <div class="card">
                     <h3>🚗 Particulares</h3>
-                    <p>Especialistas en golpes de parking y granizo. Resultados impecables en el mismo día.</p>
+                    <p>Golpes de parking, granizo e incidentes cotidianos. Reparado en el mismo día con acabado de fábrica.</p>
                 </div>
                 <div class="card">
                     <h3>🏪 Talleres</h3>
-                    <p>Servicio de varilleros externo para talleres y concesionarios que buscan la máxima calidad.</p>
+                    <p>Colaboración técnica profesional para talleres y concesionarios. Máxima rentabilidad y acabado.</p>
                 </div>
                 <div class="card">
                     <h3>🏢 Seguros</h3>
-                    <p>Gestión rápida de siniestros. Calidad premium manteniendo el valor del vehículo.</p>
+                    <p>Especialistas en siniestros y flotas. Gestión ágil manteniendo la garantía de pintura original.</p>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2 style="text-align: center; margin-bottom: 30px;">Resultados Reales</h2>
+            <h2 style="text-align: center; margin-bottom: 30px; font-size: 2rem;">Resultados Reales</h2>
             <div class="before-after">
                 <img src="antes1.jpg" alt="Antes">
                 <img src="despues1.jpg" alt="Después">
@@ -158,7 +169,7 @@
     </div>
 
     <div class="footer">
-        © 2026 Dent Tech BCN · Barcelona · Paintless Dent Repair
+        © 2026 DENT TECH BCN · BARCELONA · PAINTLESS DENT REPAIR
     </div>
 
 </body>

@@ -1,170 +1,388 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dent Tech BCN | PDR Technical Excellence</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <title>Dent Tech BCN | Reparación PDR Express Barcelona</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
     <style>
+
         :root {
+
             --dorado: #c8a96a;
+
             --negro: #000000;
-            --gris-oscuro: #0a0a0a;
-            --gris-borde: #1a1a1a;
-            --fuente-tech: 'Inter', sans-serif;
+
+            --negro-suave: #0a0a0a;
+
+            --ws-green: #25d366;
+
+            --gris-texto: #cccccc;
+
         }
+
+
 
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
-        body { background: var(--negro); color: white; font-family: var(--fuente-tech); overflow-x: hidden; }
 
-        /* PORTADA MINIMALISTA Y TÉCNICA */
-        .hero-tech {
-            height: 70vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        body, html { width: 100%; font-family: 'Inter', sans-serif; background: var(--negro); color: white; line-height: 1.6; overflow-x: hidden; }
+
+
+
+        /* ANIMACIÓN DE PULSO PARA CTAs */
+
+        @keyframes pulse-btn {
+
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(200, 169, 106, 0.7); }
+
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(200, 169, 106, 0); }
+
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(200, 169, 106, 0); }
+
+        }
+
+
+
+        .container { width: 90%; max-width: 1100px; margin: auto; }
+
+
+
+        /* HERO - PORTADA REDUCIDA Y EFICAZ */
+
+        .hero {
+
+            position: relative; 
+
+            width: 100%; 
+
+            height: 60vh; /* Altura reducida */
+
+            min-height: 400px; /* Asegura un mínimo en móviles */
+
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url('hero.jpg') no-repeat center center / cover;
+
+            display: flex; 
+
+            align-items: center; 
+
+            justify-content: center; 
+
             text-align: center;
-            background: radial-gradient(circle at center, #111 0%, #000 70%); /* Efecto de luz sutil en el centro */
-            border-bottom: 1px solid var(--gris-borde);
-            padding: 20px;
+
         }
 
-        .logo-container img {
-            width: 100%;
-            max-width: 450px;
-            filter: drop-shadow(0 0 30px rgba(200, 169, 106, 0.15));
-            margin-bottom: 20px;
+
+
+        .hero-content h1 { font-size: clamp(2.2rem, 7vw, 4rem); font-weight: 900; line-height: 0.9; margin-bottom: 20px; letter-spacing: -1px; }
+
+        .hero-content p { font-size: clamp(1.1rem, 2.5vw, 1.3rem); color: var(--gris-texto); margin-bottom: 35px; max-width: 700px; margin-inline: auto; }
+
+        .highlight { color: var(--dorado); text-transform: uppercase; }
+
+
+
+        /* BOTONES */
+
+        .btn-direct {
+
+            display: inline-flex; align-items: center; justify-content: center; padding: 18px 40px;
+
+            background-color: var(--dorado); color: black; text-decoration: none; font-weight: 900;
+
+            border-radius: 50px; font-size: 1rem; text-transform: uppercase;
+
+            animation: pulse-btn 2s infinite; transition: 0.3s all ease;
+
+            box-shadow: 0 10px 30px rgba(200, 169, 106, 0.4);
+
         }
 
-        .tech-line {
-            height: 1px;
-            width: 60px;
-            background: var(--dorado);
-            margin: 20px auto;
+        .btn-direct:hover { transform: translateY(-4px); background-color: #fff; box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3); }
+
+
+
+        .btn-insta {
+
+            display: inline-flex; align-items: center; gap: 10px; padding: 12px 25px;
+
+            background: transparent; border: 1px solid var(--dorado); color: var(--dorado);
+
+            text-decoration: none; border-radius: 50px; font-weight: 600; margin-top: 20px; transition: 0.3s;
+
         }
 
-        .location-tag {
-            font-size: 0.8rem;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            color: var(--dorado);
-            font-weight: 300;
+        .btn-insta:hover { background: var(--dorado); color: black; }
+
+
+
+        /* SECCIÓN ESTRUCTURA AGRESIVA */
+
+        .section-agresiva { padding: 100px 0; background-color: var(--negro-suave); border-top: 1px solid #1a1a1a; }
+
+        .agresiva-title { text-align: center; margin-bottom: 60px; }
+
+        .agresiva-title h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 15px; text-transform: uppercase; letter-spacing: -1px; }
+
+        .agresiva-title p { color: var(--gris-texto); font-size: 1.2rem; max-width: 700px; margin-inline: auto; }
+
+
+
+        .agresiva-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+
+        .agresiva-card { background: var(--negro); padding: 40px; border-radius: 20px; border: 1px solid #1a1a1a; transition: 0.3s; }
+
+        .agresiva-card:hover { border-color: var(--dorado); transform: translateY(-5px); }
+
+        .agresiva-card h3 { color: var(--dorado); margin-bottom: 15px; font-size: 1.5rem; text-transform: uppercase; font-weight: 800; }
+
+        .agresiva-card p { color: var(--gris-texto); font-size: 1rem; }
+
+
+
+        /* GALERÍA ANTES Y DESPUÉS */
+
+        .comparison { padding: 80px 0; }
+
+        .img-stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin: 40px 0; }
+
+        .img-stack img { width: 100%; border-radius: 12px; border: 1px solid #222; transition: 0.3s ease; }
+
+        .img-stack img:hover { transform: scale(1.03); border-color: var(--dorado); }
+
+
+
+        /* WHATSAPP FLOTANTE */
+
+        .ws-float {
+
+            position: fixed; bottom: 30px; right: 30px; background: var(--ws-green);
+
+            width: 65px; height: 65px; border-radius: 50%; display: flex;
+
+            align-items: center; justify-content: center; z-index: 1000;
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5); text-decoration: none; transition: 0.3s;
+
+            animation: pulse-btn 2s infinite;
+
         }
 
-        .hero-tech h1 {
-            font-size: 1.2rem;
-            font-weight: 300;
-            color: #888;
-            margin-top: 10px;
-            letter-spacing: 1px;
-        }
+        .ws-float:hover { transform: scale(1.1); }
 
-        /* BOTÓN DE ACCIÓN TÉCNICO */
-        .btn-tech {
-            margin-top: 40px;
-            padding: 15px 40px;
-            border: 1px solid var(--dorado);
-            color: var(--dorado);
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            transition: 0.4s;
-            border-radius: 2px; /* Esquinas rectas para look más técnico */
-        }
+        .ws-float svg { width: 35px; fill: white; }
 
-        .btn-tech:hover {
-            background: var(--dorado);
-            color: black;
-            box-shadow: 0 0 20px rgba(200, 169, 106, 0.4);
-        }
 
-        /* SECCIÓN DE SERVICIOS LIMPIA */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1px; /* Crea líneas divisorias finas */
-            background: var(--gris-borde);
-            border-bottom: 1px solid var(--gris-borde);
-        }
 
-        .service-item {
-            background: var(--negro);
-            padding: 60px 40px;
-            text-align: center;
-        }
+        /* CIERRE AGRESIVO */
 
-        .service-item h3 {
-            color: var(--dorado);
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
+        .final-cta { padding: 120px 0; background: var(--dorado); color: black; text-align: center; }
 
-        .service-item p {
-            color: #666;
-            font-size: 0.95rem;
-            line-height: 1.8;
-        }
+        .final-cta h2 { font-size: clamp(2rem, 8vw, 4rem); font-weight: 900; margin-bottom: 20px; line-height: 1; }
 
-        /* INSTAGRAM */
-        .insta-link {
-            padding: 40px;
-            text-align: center;
-        }
-        
-        .insta-link a {
-            color: #444;
-            text-decoration: none;
-            font-size: 0.7rem;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
-        .insta-link a:hover { color: var(--dorado); }
+        .final-cta p { font-weight: 700; margin-bottom: 40px; font-size: 1.2rem; text-transform: uppercase; }
+
+
+
+        .footer { padding: 40px; color: #444; font-size: 0.8rem; text-align: center; border-top: 1px solid #111; }
+
+
 
         @media (max-width: 768px) {
-            .hero-tech { height: 60vh; }
-            .logo-container img { max-width: 300px; }
+
+            .hero { height: 70vh; }
+
+            .img-stack { grid-template-columns: 1fr; }
+
+            .btn-direct { width: 100%; font-size: 1rem; }
+
         }
+
     </style>
+
 </head>
+
 <body>
 
-    <header class="hero-tech">
-        <div class="logo-container">
-            <img src="logo_dent_tech.png" alt="Dent Tech BCN Logo">
-        </div>
-        
-        <div class="location-tag">Barcelona</div>
-        <div class="tech-line"></div>
-        <h1>REPARACIÓN ARTESANAL DE ABOLLADURAS (PDR)</h1>
 
-        <a href="https://wa.me/34645291396" class="btn-tech">Solicitar Diagnóstico</a>
+
+    <a href="https://wa.me/34645291396" class="ws-float" target="_blank" aria-label="WhatsApp">
+
+        <svg viewBox="0 0 32 32"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.733 5.476 2.017 7.787l-2.017 7.213 7.387-1.941c2.247 1.221 4.823 1.941 7.613 1.941 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.459 0-4.743-0.643-6.721-1.769l-0.481-0.273-4.381 1.151 1.169-4.181-0.297-0.473c-1.233-1.956-1.953-4.275-1.953-6.757 0-7.363 5.971-13.333 13.333-13.333s13.333 5.971 13.333 13.333-5.971 13.333-13.333 13.333zM22.181 18.841c-0.341-0.171-2.017-0.995-2.329-1.109s-0.54-0.171-0.767 0.171c-0.227 0.341-0.881 1.109-1.08 1.336s-0.397 0.256-0.739 0.085c-0.341-0.171-1.441-0.531-2.744-1.693-1.013-0.904-1.697-2.021-1.896-2.363s-0.021-0.527 0.149-0.696c0.153-0.152 0.341-0.397 0.512-0.597s0.227-0.341 0.341-0.569c0.113-0.227 0.056-0.427-0.028-0.597s-0.767-1.848-1.051-2.531c-0.276-0.664-0.557-0.575-0.767-0.585s-0.427-0.011-0.655-0.011-0.597 0.085-0.909 0.427c-0.313 0.341-1.195 1.169-1.195 2.851s1.223 3.303 1.393 3.531c0.171 0.227 2.405 3.673 5.827 5.147 0.813 0.351 1.449 0.559 1.943 0.716 0.817 0.259 1.561 0.221 2.148 0.135 0.655-0.097 2.017-0.825 2.301-1.623s0.284-1.479 0.199-1.623c-0.084-0.144-0.313-0.227-0.655-0.399z"></path></svg>
+
+    </a>
+
+
+
+    <header class="hero">
+
+        <div class="hero-content container">
+
+            <h1>Elimina abolladuras <br><span class="highlight">sin pintar</span></h1>
+
+            <p>Recupera la estética de tu coche en tiempo récord, sin masillas y manteniendo la pintura de fábrica. Servicio express en Barcelona.</p>
+
+            <a href="https://wa.me/34645291396" class="btn-direct">Enviar foto por WhatsApp</a>
+
+        </div>
+
     </header>
 
-    <section class="services-grid">
-        <div class="service-item">
-            <h3>📍 Workshop</h3>
-            <p>Precisión total en nuestras instalaciones con iluminación técnica específica.</p>
+
+
+    <section class="section-agresiva">
+
+        <div class="container">
+
+            <div class="agresiva-title">
+
+                <p style="color:var(--dorado); font-weight:700; text-transform:uppercase; letter-spacing:2px; margin-bottom:10px;">La solución inteligente</p>
+
+                <h2>¿Por qué elegir PDR?</h2>
+
+                <p>Ahorra dinero, tiempo y mantén el valor de tu vehículo con nuestra técnica artesanal de alta precisión.</p>
+
+            </div>
+
+            
+
+            <div class="agresiva-grid">
+
+                <div class="agresiva-card">
+
+                    <h3>🚗 Mantén el Valor</h3>
+
+                    <p>Al no repintar, el coche no pierde valor de reventa. Mantienes el acabado original de fábrica.</p>
+
+                </div>
+
+                <div class="agresiva-card">
+
+                    <h3>⏳ Tiempo Express</h3>
+
+                    <p>La mayoría de abolladuras se reparan en el día. No te quedes días sin coche.</p>
+
+                </div>
+
+                <div class="agresiva-card">
+
+                    <h3> Más Económico</h3>
+
+                    <p>Hasta un 60% más barato que la pintura tradicional. Una solución inteligente y eficiente.</p>
+
+                </div>
+
+                
+
+                <div class="agresiva-card">
+
+                    <h3> A Domicilio</h3>
+
+                    <p>Nos desplazamos a tu casa o concesionario. Comodidad total sin que tengas que mover tu vehículo.</p>
+
+                </div>
+
+                <div class="agresiva-card">
+
+                    <h3> Taller Propio</h3>
+
+                    <p>Disponemos de instalaciones equipadas con iluminación técnica para acabados de máxima precisión.</p>
+
+                </div>
+
+                <div class="agresiva-card">
+
+                    <h3> Particulares</h3>
+
+                    <p>Golpes de parking y granizo. Resultados impecables manteniendo la garantía de fábrica.</p>
+
+                </div>
+
+            </div>
+
+            
+
+            <div style="text-align:center; margin-top: 60px;">
+
+                <a href="https://www.instagram.com/denttechbcn?igsh=MWpyNXkxMzV5b3Jx" target="_blank" class="btn-insta">
+
+                    📸 Ver trabajos reales en Instagram
+
+                </a>
+
+            </div>
+
         </div>
-        <div class="service-item">
-            <h3>🚐 Mobile Service</h3>
-            <p>Reparación en su domicilio o concesionario. Máxima flexibilidad logística.</p>
-        </div>
-        <div class="service-item">
-            <h3>🛠️ PDR Tech</h3>
-            <p>Recuperación de la línea original sin repintar. Mantiene la garantía de fábrica.</p>
-        </div>
+
     </section>
 
-    <div class="insta-link">
-        <a href="https://www.instagram.com/denttechbcn?igsh=MWpyNXkxMzV5b3Jx" target="_blank">
-            INSTAGRAM // @DENTTECHBCN
-        </a>
-    </div>
+
+
+    <section class="comparison container">
+
+        <div style="text-align:center; margin-bottom: 50px;">
+
+            <p style="color:var(--dorado); font-weight:900; text-transform:uppercase; letter-spacing:2px;">Calidad Demostrada</p>
+
+            <h2 style="font-size: 2.5rem; font-weight: 900; letter-spacing: -1px;">Resultados Impecables</h2>
+
+        </div>
+
+        
+
+        <div class="img-stack"><img src="antes1.jpg" alt="Antes"><img src="despues1.jpg" alt="Después"></div>
+
+        <div class="img-stack"><img src="antes2.jpg" alt="Antes"><img src="despues2.jpg" alt="Después"></div>
+
+        
+
+        <p style="text-align:center; color:#666; margin-top:20px;">Recuperamos la línea original de la chapa sin usar masillas ni pinturas.</p>
+
+        <div style="text-align:center; margin-top:50px;">
+
+            <a href="https://wa.me/34645291396" class="btn-direct">Enviar foto ahora</a>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="final-cta">
+
+        <div class="container">
+
+            <h2>¿A QUÉ ESPERAS?</h2>
+
+            <p>Ahorra tiempo y dinero. Presupuesto al instante.</p>
+
+            <a href="https://wa.me/34645291396" class="btn-direct" style="background: black; color: white;">
+
+                Pedir Presupuesto por WhatsApp
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <footer class="footer">
+
+        © 2026 DENT TECH BCN · BARCELONA · ESPECIALISTAS EN PDR (PAINTLESS DENT REPAIR)
+
+    </footer>
+
+
 
 </body>
+
 </html>
+

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dent Tech BCN | PDR Technical Excellence</title>
+    <title>Dent Tech BCN | Excelencia en Reparación de Abolladuras</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
 
@@ -26,70 +26,83 @@
             line-height: 1.6;
         }
 
-        /* HERO TÉCNICO MINIMALISTA */
+        /* CABECERA CON LOGO */
         .hero-tech {
-            height: 75vh;
+            height: 70vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: radial-gradient(circle at center, #111 0%, #000 75%);
+            background: radial-gradient(circle at center, #151515 0%, #000 65%);
             border-bottom: 1px solid var(--gris-borde);
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         .logo-box img {
             width: 100%;
-            max-width: 480px;
-            filter: drop-shadow(0 0 25px rgba(200, 169, 106, 0.1));
-            margin-bottom: 25px;
+            max-width: 420px;
+            height: auto;
+            filter: drop-shadow(0 0 20px rgba(200, 169, 106, 0.15));
         }
 
         .divider {
             height: 1px;
             width: 40px;
             background: var(--dorado);
-            margin: 15px auto;
+            margin: 25px auto;
         }
 
         .tagline {
             font-size: 0.75rem;
-            letter-spacing: 7px;
+            letter-spacing: 8px;
             text-transform: uppercase;
             color: var(--dorado);
             font-weight: 300;
+            margin-bottom: 10px;
         }
 
         .hero-tech h1 {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 300;
             color: var(--gris-texto);
-            margin-top: 15px;
-            letter-spacing: 2px;
-            max-width: 600px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
 
-        /* CONTENEDOR PRINCIPAL */
-        .container { width: 90%; max-width: 1100px; margin: auto; }
+        .btn-minimal {
+            display: inline-block;
+            margin-top: 50px;
+            padding: 18px 45px;
+            border: 1px solid var(--dorado);
+            color: var(--dorado);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: 0.4s;
+        }
 
-        /* GRID DE SERVICIOS TÉCNICOS */
+        .btn-minimal:hover {
+            background: var(--dorado);
+            color: #000;
+            box-shadow: 0 0 30px rgba(200, 169, 106, 0.25);
+        }
+
+        /* SECCIÓN DE SERVICIOS */
         .tech-services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1px;
             background: var(--gris-borde);
-            margin-top: -1px;
         }
 
         .service-card {
             background: var(--negro-puro);
             padding: 70px 40px;
             text-align: center;
-            transition: 0.3s;
         }
-
-        .service-card:hover { background: var(--negro-mate); }
 
         .service-card h3 {
             color: var(--dorado);
@@ -105,69 +118,23 @@
             font-weight: 300;
         }
 
-        /* GALERÍA ANTES/DESPUÉS */
+        .container { width: 90%; max-width: 1100px; margin: auto; }
+
         .work-gallery { padding: 100px 0; border-top: 1px solid var(--gris-borde); }
         .grid-work { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 40px; }
-        .grid-work img { 
-            width: 100%; 
-            border-radius: 4px; 
-            filter: grayscale(20%);
-            transition: 0.5s;
-            border: 1px solid var(--gris-borde);
-        }
-        .grid-work img:hover { filter: grayscale(0%); border-color: var(--dorado); }
+        .grid-work img { width: 100%; border-radius: 4px; border: 1px solid var(--gris-borde); }
 
-        /* SECCIÓN DE CONTACTO TÉCNICO */
-        .cta-section {
-            padding: 120px 0;
-            text-align: center;
-            border-top: 1px solid var(--gris-borde);
-        }
+        .cta-section { padding: 100px 0; text-align: center; border-top: 1px solid var(--gris-borde); }
 
-        .btn-minimal {
-            display: inline-block;
-            padding: 18px 45px;
-            border: 1px solid var(--dorado);
-            color: var(--dorado);
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            transition: 0.4s;
-        }
+        .insta-footer { padding: 60px 0; text-align: center; }
+        .insta-footer a { color: #444; text-decoration: none; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; }
 
-        .btn-minimal:hover {
-            background: var(--dorado);
-            color: #000;
-            box-shadow: 0 0 30px rgba(200, 169, 106, 0.2);
-        }
-
-        .insta-footer {
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .insta-footer a {
-            color: #444;
-            text-decoration: none;
-            font-size: 0.7rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .footer { 
-            padding: 40px; 
-            color: #222; 
-            font-size: 0.7rem; 
-            text-align: center; 
-            letter-spacing: 1px;
-        }
+        .footer { padding: 40px; color: #222; font-size: 0.7rem; text-align: center; }
 
         @media (max-width: 768px) {
             .hero-tech { height: 60vh; }
             .grid-work { grid-template-columns: 1fr; }
-            .logo-box img { max-width: 320px; }
+            .logo-box img { max-width: 280px; }
         }
     </style>
 </head>
@@ -177,30 +144,33 @@
         <div class="logo-box">
             <img src="logo_dent_tech.png" alt="Dent Tech BCN Logo">
         </div>
-        <div class="tagline">Barcelona</div>
+        
         <div class="divider"></div>
-        <h1>REPARACIÓN ARTESANAL DE ABOLLADURAS (PDR)</h1>
-        <a href="https://wa.me/34645291396" class="btn-minimal" style="margin-top: 40px;">Solicitar Diagnóstico</a>
+        
+        <div class="tagline">Barcelona</div>
+        <h1>Excelencia Técnica en Desabollado sin Pintar</h1>
+
+        <a href="https://wa.me/34645291396" class="btn-minimal">Solicitar Diagnóstico</a>
     </header>
 
     <section class="tech-services">
         <div class="service-card">
-            <h3>📍 Workshop</h3>
+            <h3>📍 Taller Especializado</h3>
             <p>Precisión absoluta en instalaciones optimizadas con iluminación técnica de alta definición.</p>
         </div>
         <div class="service-card">
-            <h3>🚐 Service Unit</h3>
-            <p>Unidad móvil para reparaciones a domicilio o concesionario. Logística eficiente sin desplazamiento.</p>
+            <h3>🚐 Servicio a Domicilio</h3>
+            <p>Unidad móvil para reparaciones en su ubicación o concesionario con máxima comodidad.</p>
         </div>
         <div class="service-card">
-            <h3>🛠️ PDR System</h3>
-            <p>Tecnología sin pintura que preserva el valor de mercado y la integridad original del vehículo.</p>
+            <h3>🛠️ Sistema PDR</h3>
+            <p>Técnica artesanal que preserva la pintura original y el valor de mercado de su vehículo.</p>
         </div>
     </section>
 
     <div class="container">
         <section class="work-gallery">
-            <h2 style="text-align: center; font-size: 0.9rem; letter-spacing: 4px; color: var(--dorado); text-transform: uppercase;">Technical Results</h2>
+            <h2 style="text-align: center; font-size: 0.9rem; letter-spacing: 4px; color: var(--dorado); text-transform: uppercase;">Resultados Técnicos</h2>
             <div class="grid-work">
                 <img src="antes1.jpg" alt="Antes">
                 <img src="despues1.jpg" alt="Después">
@@ -208,8 +178,8 @@
         </section>
 
         <section class="cta-section">
-            <h2 style="font-size: 2rem; font-weight: 300; margin-bottom: 40px;">¿Necesitas un presupuesto técnico?</h2>
-            <a href="https://wa.me/34645291396" class="btn-minimal">Enviar fotografías por WhatsApp</a>
+            <h2 style="font-size: 1.8rem; font-weight: 300; margin-bottom: 40px;">¿Necesita un presupuesto?</h2>
+            <a href="https://wa.me/34645291396" class="btn-minimal">Enviar fotos por WhatsApp</a>
         </section>
     </div>
 
@@ -220,7 +190,7 @@
     </div>
 
     <footer class="footer">
-        © 2026 DENT TECH BCN · ESPECIALISTAS EN PAINTLESS DENT REPAIR
+        © 2026 DENT TECH BCN · REPARACIÓN DE ABOLLADURAS SIN PINTAR
     </footer>
 
 </body>
